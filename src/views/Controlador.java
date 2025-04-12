@@ -8,6 +8,11 @@ import java.util.InvalidPropertiesFormatException;
 import java.util.List;
 
 public class Controlador {
+    
+    public static ArrayList<Pais> getPaises(){
+        return Persistencia.getPaises();
+    }
+    
     public static TipoAlimentacion[] getTiposAlimentacion(){
         return  TipoAlimentacion.values();
     }
@@ -24,6 +29,10 @@ public class Controlador {
             animales.add(new AnimalViewModel(animal));
         }
         return animales;
+    }
+    
+    public static void guardarAnimal(Mamifero mamifero){
+        Persistencia.agregarAnimal(mamifero);
     }
     
     public static ComidaViewModel  calcularComida(){

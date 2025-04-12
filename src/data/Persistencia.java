@@ -76,6 +76,9 @@ public class Persistencia {
 
 public static void agregarAnimal(Mamifero mamifero){
     animales.add(mamifero);
+
 }
 
 }
+
+
